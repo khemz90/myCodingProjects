@@ -1,0 +1,25 @@
+#container {
+    width: 500px;
+    height: 500px;
+    position: relative;
+    background: orange;
+}
+#animate {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    
+}
+
+#draggable { width: 150px; height: 150px; padding: 0.5em; }
+         .back{
+            background-color: lightgrey;
+            width: 50px;
+            padding: 25px;
+            border: 25px solid navy;
+        }
+
+label {
+            display: inline-block;
+            width: 15em;
+         }

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Registration form</title>
+<link rel = "stylesheet" href = "//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type = "text/javascript" src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src = "//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script type = "text/javascript" src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+<script src = "//code.jquery.com/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="testp.js"></script>
+<link rel="stylesheet" href=" maincss.css">
+</head>
+<body>
+
+<form name="myForm" onsubmit="return validateFormOnSubmit(this)" action="">
+<h2>Country Selection</h2>
+<p>Welcome!</br> Please select a country below:</p>
+<p id="DisplayCountryerror"></p>
+<select id="Choosecountry1" name="Maincountry" onchange="SelectCountry()"> 
+  <option value="none"></option>
+  <option value="usa">USA</option>
+  <option value="Canada">Canada</option>
+</select>
+</br></br>
+
+<p id="DisplayStateerror"></p>
+<p>State/Province</p>
+<select disabled id="states" name="Statesprov1">
+       <option></option> 
+</select>
+</br></br></br>
+<p id="DisplayUsererror"></p>
+Username: <input type="text" name="names1" id="UsernameId">
+</br></br>
+<p id="DisplayPerror"></p>
+Password: <input type="text" name="Passwordz" id="Pass1" onmouseout="PasswordChecknow()">
+</br></br>
+<p id="DisplayConfpass"></p>
+Confirm Password: <input type="text" name="ConfPass" id="Pass2" onmouseout="ConfirmingPass()">
+</br></br>
+<p id="Displayboxerror"></p>
+Agree<input type="checkbox" id="iAgree" name="Thebox" onclick="validateBox()">
+</br></br>
+
+<input name="Submit" value="Submit" type="submit" id="sub1" disabled>
+</br></br>
+</form>
+
+<div id ="container">
+    <img src="testimage.jpg" id="animate" onload="myMove()" onmouseover="myMove1()" onmouseleave="myMove3()">
+</div>
+
+<h1>Sending and Retrieving Data</h1>
+<p>Please note this function works in firefox only</p>
+     country:  
+     <select id="coun" onchange="getStateData()">
+     <option value="Us1">USA</option>
+     <option value="Can1">Canada</option>
+     </select><br/><br/>
+    <select id="PopStateProv">
+    <option></option>
+    </select> 
+
+<h1>JSONP - Local Weather</h1>
+<label for="city">Enter Location</label>
+<input type="text" id="city" value='New York, NY'>
+<input type="button" value=" Get " onclick="doRequest()" id="cli">
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<input type="checkbox" id="req"> <label for="req"> request </label>
+<input type="checkbox" id="resp"><label for="resp">response</label>
+<br>
+<p>Please Click below to view the weather for the Entered Location</p>
+<input type="radio" id="test" name="type" onclick="doRequest()"> <label for="resp">Weather!</label> 
+<hr>
+
+
+<form>
+  <fieldset id="output1">
+
+  </fieldset>
+</form>
+
+<br><input type="radio" id="Small" name="size1" onclick="checkSmall()"> <label >small</label> 
+<br><input type="radio" id="medium" name="size1" onclick="checkMed()" checked> <label >medium</label> 
+<br><input type="radio" id="large" name="size1" onclick="checkLarge()"> <label >large</label> 
+
+
+<h2>Widgets section</h2>
+
+
+ <div id = "draggable" class = "ui-widget-content">
+       <p class = "back">Drag</p>
+  </div>
+</br></br>
+<div>
+<p>Date: <input type = "text" id = "datepicker"></p>
+</div>
+
+
+
+
+      <p><a href = "#" title = "Widgets are fun">
+         TestProject1</a> test paragraph</p>
+			
+      <p><a href = "https://www.google.com"
+         title = "cool"> J Query</a> is a fast and 
+         concise JavaScript library created by John Resig in 2006. 
+         jQuery simplifies HTML document traversing, event handling,  
+         animating, and Ajax interactions for Rapid Web Development.</p>
+			
+      <p><label for = "age">your tutorials details</label>
+         <input id = "age" title = "Please enter your tutorial name. 
+         We will search in our data base"></p>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
